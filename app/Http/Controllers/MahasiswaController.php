@@ -85,4 +85,13 @@ class MahasiswaController extends Controller
         $mahasiswa->save();
         dump($mahasiswa);
     }
+
+    public function massUpdate()
+    {
+        Mahasiswa::where('nim', '19003036')->first()->update([
+            'tanggal_lahir' => '2000-04-20',
+            'ipk' => 2.1
+        ]);
+        return "Berhasil di proses";
+    }
 }
