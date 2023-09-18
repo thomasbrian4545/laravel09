@@ -107,4 +107,10 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::destroy(1);
         dump($mahasiswa);
     }
+
+    public function massDelete()
+    {
+        $mahasiswa = Mahasiswa::where('ipk', '>', 2)->delete();
+        dump($mahasiswa);
+    }
 }
