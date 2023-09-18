@@ -23,4 +23,17 @@ class MahasiswaController extends Controller
         $mahasiswa->save();
         dump($mahasiswa);
     }
+
+    public function massAssignment()
+    {
+        Mahasiswa::create(
+            [
+                'nim' => '19021044',
+                'nama' => 'Rudi Permana',
+                'tanggal_lahir' => '2000-08-22',
+                'ipk' => 2.5,
+            ]
+        );
+        return "Berhasil di proses";
+    }
 }
