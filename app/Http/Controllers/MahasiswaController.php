@@ -101,4 +101,10 @@ class MahasiswaController extends Controller
         $mahasiswa->delete();
         dump($mahasiswa);
     }
+
+    public function destroy()
+    {
+        $mahasiswa = Mahasiswa::destroy(1);
+        dump($mahasiswa);
+    }
 }
