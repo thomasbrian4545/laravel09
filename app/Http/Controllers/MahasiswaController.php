@@ -94,4 +94,11 @@ class MahasiswaController extends Controller
         ]);
         return "Berhasil di proses";
     }
+
+    public function delete()
+    {
+        $mahasiswa = Mahasiswa::find(1);
+        $mahasiswa->delete();
+        dump($mahasiswa);
+    }
 }
