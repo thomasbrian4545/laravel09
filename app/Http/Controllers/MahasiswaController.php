@@ -67,4 +67,13 @@ class MahasiswaController extends Controller
         );
         dump($mahasiswa3);
     }
+
+    public function update()
+    {
+        $mahasiswa = Mahasiswa::find(1);
+        $mahasiswa->tanggal_lahir = '2001-01-01';
+        $mahasiswa->ipk = 2.9;
+        $mahasiswa->save();
+        dump($mahasiswa);
+    }
 }
